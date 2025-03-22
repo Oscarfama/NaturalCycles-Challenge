@@ -1,3 +1,5 @@
+$NAT-CYCLE-PURPLE: #72035d;
+$NAT-CYCLE-PINK-100: #f5f3f3;
 
 main {
   width: 100%;
@@ -5,9 +7,47 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  overflow: hidden;
+  background-color: $NAT-CYCLE-PINK-100;
 
-  h1 {
-    font-size: 6rem;
-  }
+  flex-direction: column;
+}
+.title {
+  font-family: Open Sauce One;
+  font-weight: 800;
+  line-height: 135%;
+  letter-spacing: -2%;
+  color: $NAT-CYCLE-PURPLE;
+}
+.countdown {
+  font-family: Open Sauce One;
+  font-weight: 800;
+  line-height: 150%;
+  letter-spacing: -2%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 99vw;
+  text-align: center;
+}
+
+.title,
+.countdown {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.inputs {
+  margin-top: 20px;
+}
+
+input,
+button {
+  margin: 5px;
 }

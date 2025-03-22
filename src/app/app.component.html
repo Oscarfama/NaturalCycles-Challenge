@@ -1,6 +1,24 @@
-
 <main class="main">
-  <h1>Hello! 👋</h1>
-</main>
+  <div class="container">
+    <div class="title" appFitText>Time to {{ title.value }}</div>
+    <div class="countdown" appFitText>{{ timeLeftInSeconds() | countdowm }}</div>
 
+    <mat-form-field>
+      <mat-label for="name">Name</mat-label>
+      <input matInput type="text" [formControl]="title" (input)="updateSessionStorage()" />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Date</mat-label>
+      <input
+        matInput
+        [matDatepicker]="picker"
+        [formControl]="targetDate"
+        (dateChange)="updateSessionStorage()"
+      />
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
+</main>
 <router-outlet />
