@@ -1,6 +1,6 @@
 # Description & requirements
 
-Your objective in this assignment is to create a countdown app built using this boilerplate (+ any
+The objective in this assignment is to create a countdown app built using this boilerplate (+ any
 other tools of your choice) that follows the design specifications provided
 [in this Figma file](https://www.figma.com/file/UPEugUz5jM9IzIkWft2Y9m/NC-challenge). The app should
 work in portrait as well as in landscape mode while the text displayed on the screen should always
@@ -18,6 +18,8 @@ filling the whole width) using the maximum possible font-size.
 Please make sure that your text fit solution is reusable and that the event name, as well as the
 specified end date, are persisted between page reloads.
 
+## Working Web Page
+Feel free to use the application with the following [Link](https://unrivaled-macaron-b8c64b.netlify.app/)
 ## Running the application locally
 
 **Note:** Ensure you have [NodeJs](https://nodejs.org/en/download) installed.
@@ -30,17 +32,16 @@ automatically reload if you change any of the source files.
 
 ## Running unit tests
 
-- Run `ng test` to execute the unit test via
-  [karma](https://karma-runner.github.io./latest/index.html).
+- Run `ng test` to execute the unit test via [karma](https://karma-runner.github.io./latest/index.html).
 
 ## How to improve solution
 
 - In the `resize-label.directive.ts`, one option was to use the window's width instead of the
   parent's. However, for better reusability, I preferred using the parent so that it can work within
   any container.
-- **Organize the project:** at the moment we have the storage service and the resize directive in
-  the same folder, I would modify the structre of the app so it would be easier to manage in the
-  future.
+- Organize the project: at the moment we have the storage service, the countdown pipe and the
+  resize directive in the same location, I would modify the structure of the app so it would be
+  easier to manage in the future.
 - Maybe the session-storage.service was not needed for the only pourpose of setting and retrieving
   and doing the session storage in the app component, I prefer having this as a service so it can be
   centralized, we can also enhance it by handling types or null arguments.
@@ -48,15 +49,16 @@ automatically reload if you change any of the source files.
   is to temporary save the input's data, session storage is a great solution.
 - for the inputs to be persisted, I can create a class in the styles.scss so in case we want to add
   more inputs, it would look the same everywhere.
+- More Tests, some tests have been created, but more are needed to cover additional possible
+  scenarios, more in the directive, to check the min and Max FontSize or when the parent width
+  changes.
 - **Note:** this is not improvement but I would modify the prettier file so I can use semi colons,
   personal preference (I did that though).
 
 ## Steps for application to be ready for production
 
-1. **Add More Unit Tests:** Some tests have been created, but more are needed to cover additional
-   possible scenarios, more in the directive, to check the min and Max FontSize or when the parent
-   width changes.
-2. **Configure the build for prod environment:**Angular allows modifying certain configurations for
+1. **Add More Unit Tests:**
+2. **Configure the build for prod environment:** Angular allows modifying certain configurations for
    different environments in the `angular.json` file, such as hiding the codebase, ignoring checks
    and warnings, and more. We can create an NPM command to build and run the application in the
    production environment, e.g. `"build:prod": "ng build --configuration production"`. This will
