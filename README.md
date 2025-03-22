@@ -41,8 +41,13 @@ automatically reload if you change any of the source files.
 - **Organize the project:** at the moment we have the storage service and the resize directive in
   the same folder, I would modify the structre of the app so it would be easier to manage in the
   future.
-- Maybe the session-storage.service was not needed for the only pourpose of setting and retrieving,
-  but we can enhance it by handling types or null arguments.
+- Maybe the session-storage.service was not needed for the only pourpose of setting and retrieving
+  and doing the session storage in the app component, I prefer having this as a service so it can be
+  centralized, we can also enhance it by handling types or null arguments.
+- Ideally we would store the data on every change using maybe a TanStack mutation but since the idea
+  is to temporary save the input's data, session storage is a great solution.
+- for the inputs to be persisted, I can create a class in the styles.scss so in case we want to add
+  more inputs, it would look the same everywhere.
 - **Note:** this is not improvement but I would modify the prettier file so I can use semi colons,
   personal preference (I did that though).
 
