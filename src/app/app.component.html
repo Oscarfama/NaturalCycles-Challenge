@@ -2,12 +2,13 @@
   <div class="container">
     <div class="title" appFitText>Time to {{ title.value }}</div>
     <div class="countdown" appFitText>{{ timeLeftInSeconds() | countdowm }}</div>
+  </div>
 
+  <div class="form">
     <mat-form-field>
       <mat-label for="name">Name</mat-label>
       <input matInput type="text" [formControl]="title" (input)="updateSessionStorage()" />
     </mat-form-field>
-
     <mat-form-field>
       <mat-label>Date</mat-label>
       <input
