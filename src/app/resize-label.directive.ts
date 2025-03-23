@@ -14,7 +14,7 @@ import {
 export class ResizeLabelDirective implements AfterViewInit, OnDestroy {
   #nativeElement = inject(ElementRef).nativeElement;
   readonly minFontSize = 10;
-  readonly maxFontSize = 200;
+  readonly maxFontSize = 500;
 
   #textChangeObserver = new MutationObserver(() => {
     this.adjustFontSize();

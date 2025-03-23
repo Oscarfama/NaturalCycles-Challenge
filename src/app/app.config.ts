@@ -3,7 +3,7 @@ import { provideRouter } from '@angular/router';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { routes } from './app.routes';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
-import { MAT_DATE_FORMATS, provideNativeDateAdapter } from '@angular/material/core';
+import { provideNativeDateAdapter } from '@angular/material/core';
 export const MY_FORMATS = {
   parse: {
     dateInput: 'LL',
